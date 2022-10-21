@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+git checkout -b $1
+git push origin $1:refs/heads/$1
+git config branch.$1.remote origin
+git config branch.$1.merge refs/heads/$1
+
